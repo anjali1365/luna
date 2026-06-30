@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4338CA"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#818CF8" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#4F46E5" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="petalL" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A5B4FC"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+    <linearGradient id="petalR" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#A5B4FC"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+    <linearGradient id="petalT" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#C7D2FE"/>
+      <stop offset="100%" stop-color="#818CF8"/>
+    </linearGradient>
+    <filter id="softglow">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background removed to make logo perfectly transparent -->
+
+  <!-- Lotus petals (neural-shaped, pointed with curve) -->
+  <!-- Bottom left petal -->
+  <path d="M50 62 C38 60 28 70 32 80 C36 88 48 82 50 72 Z" fill="url(#petalL)" opacity="0.85"/>
+  <!-- Bottom right petal -->
+  <path d="M50 62 C62 60 72 70 68 80 C64 88 52 82 50 72 Z" fill="url(#petalR)" opacity="0.85"/>
+  <!-- Left petal -->
+  <path d="M50 55 C40 48 28 50 26 60 C24 68 36 70 44 64 Z" fill="url(#petalL)" opacity="0.85"/>
+  <!-- Right petal -->
+  <path d="M50 55 C60 48 72 50 74 60 C76 68 64 70 56 64 Z" fill="url(#petalR)" opacity="0.85"/>
+  <!-- Top left petal -->
+  <path d="M50 50 C42 38 30 36 28 46 C26 54 38 58 46 52 Z" fill="url(#petalT)" opacity="0.9"/>
+  <!-- Top right petal -->
+  <path d="M50 50 C58 38 70 36 72 46 C74 54 62 58 54 52 Z" fill="url(#petalT)" opacity="0.9"/>
+  <!-- Top center petal -->
+  <path d="M50 50 C44 36 46 22 50 20 C54 22 56 36 50 50 Z" fill="url(#petalT)" opacity="0.95"/>
+
+  <!-- Neural network connections (synapses between nodes) -->
+  <g stroke="#C7D2FE" stroke-width="0.6" opacity="0.7" filter="url(#softglow)">
+    <line x1="50" y1="50" x2="38" y2="42"/>
+    <line x1="50" y1="50" x2="62" y2="42"/>
+    <line x1="50" y1="50" x2="50" y2="30"/>
+    <line x1="50" y1="50" x2="36" y2="58"/>
+    <line x1="50" y1="50" x2="64" y2="58"/>
+    <line x1="50" y1="50" x2="42" y2="68"/>
+    <line x1="50" y1="50" x2="58" y2="68"/>
+    <line x1="38" y1="42" x2="50" y2="30"/>
+    <line x1="62" y1="42" x2="50" y2="30"/>
+    <line x1="38" y1="42" x2="36" y2="58"/>
+    <line x1="62" y1="42" x2="64" y2="58"/>
+    <line x1="36" y1="58" x2="42" y2="68"/>
+    <line x1="64" y1="58" x2="58" y2="68"/>
+  </g>
+
+  <!-- Neural nodes -->
+  <g filter="url(#softglow)">
+    <!-- Center node -->
+    <circle cx="50" cy="50" r="3.5" fill="#EEF2FF"/>
+    <!-- Outer nodes -->
+    <circle cx="50" cy="30" r="2" fill="#C7D2FE"/>
+    <circle cx="38" cy="42" r="2" fill="#C7D2FE"/>
+    <circle cx="62" cy="42" r="2" fill="#C7D2FE"/>
+    <circle cx="36" cy="58" r="2" fill="#A5B4FC"/>
+    <circle cx="64" cy="58" r="2" fill="#A5B4FC"/>
+    <circle cx="42" cy="68" r="2" fill="#A5B4FC"/>
+    <circle cx="58" cy="68" r="2" fill="#A5B4FC"/>
+  </g>
+
+  <!-- Center glow dot -->
+  <circle cx="50" cy="50" r="2" fill="white" opacity="0.9"/>
+</svg>
