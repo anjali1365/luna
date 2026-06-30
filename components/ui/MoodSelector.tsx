@@ -89,30 +89,7 @@ export default function MoodSelector() {
         transition={{ duration: 0.7, ease: "easeOut" }}
         className="text-center mb-12"
       >
-        <a 
-          href="https://novonixsoft.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group relative inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-white/40 dark:bg-slate-950/40 hover:bg-white/60 hover:dark:bg-white/10 backdrop-blur-xl border border-white/60 dark:border-white/10 mb-8 shadow-lg transition-all duration-500 cursor-pointer hover:scale-[1.03] hover:shadow-cyan-500/20 dark:hover:shadow-[0_0_30px_rgba(6,182,212,0.35)] dark:hover:border-cyan-500/30"
-        >
-          {/* Inner gradient (Light theme only) */}
-          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-brand-500/10 via-cyan-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 dark:group-hover:opacity-0 transition-opacity duration-500" />
-          
-          <img src="/icon.svg" alt="Luna Sakha" className="relative z-10 w-4 h-4 drop-shadow-[0_0_8px_rgba(34,211,238,0.8)] group-hover:animate-pulse" />
-          
-          <div className="relative z-10 flex items-center gap-1.5">
-            <span className="text-[10px] md:text-xs font-bold text-slate-800 dark:text-white tracking-[0.2em] uppercase">
-              Luna Sakha
-            </span>
-            <span className="text-[9px] font-medium text-slate-500 dark:text-slate-400 lowercase tracking-normal translate-y-[1px]">
-              by
-            </span>
-            <span className="text-[10px] md:text-xs font-bold tracking-wider">
-              <span className="text-slate-800 dark:text-white">Novonix</span>
-              <span className="text-brand-600 dark:text-cyan-400">Soft</span>
-            </span>
-          </div>
-        </a>
+
         <h2 className="text-4xl md:text-5xl font-serif text-slate-800 dark:text-white mb-4 leading-tight drop-shadow-md">
           How is your heart<br />feeling right now?
         </h2>
